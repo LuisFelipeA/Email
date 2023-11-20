@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using EnvioDeEmail.Adapter;
+using EnvioDeEmail.Builder;
 
-namespace Email
+namespace EnvioDeEmail.Adapter
 {
     // Implementação do Adapter para enviar o Email
     class AdapterEnvioEmail : IAdapterEnvioEmail
     {
-        private Email Email;
+        private Builder.Email Email;
 
-        public AdapterEnvioEmail(Email email)
+        public AdapterEnvioEmail(Builder.Email email)
         {
             Email = email;
         }

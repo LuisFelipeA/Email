@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using EnvioDeEmail.Builder;
 
-namespace Email
+namespace EnvioDeEmail.Decorator
 {
     // Exemplo de um Decorator que adiciona um anexo ao Email
     class DecoratorAnexo : DecoratorEmail

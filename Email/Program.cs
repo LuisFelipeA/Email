@@ -1,4 +1,6 @@
-﻿using Email;
+﻿using EnvioDeEmail.Adapter;
+using EnvioDeEmail.Builder;
+using EnvioDeEmail.Decorator;
 
 // Usando o padrão Builder para construir um objeto Email
 var BuilderEmail = new BuilderEmail();

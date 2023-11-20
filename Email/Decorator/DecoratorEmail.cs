@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using EnvioDeEmail.Builder;
 
-namespace Email
+
+namespace EnvioDeEmail.Decorator
 {
     // Padrão Decorator para adicionar funcionalidades extras aos objetos Email
     abstract class DecoratorEmail : Email

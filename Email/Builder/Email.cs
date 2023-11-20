@@ -1,4 +1,4 @@
-﻿namespace Email
+﻿namespace EnvioDeEmail.Builder
 {
     // Classe que representa um email
     class Email
