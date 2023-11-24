@@ -1,5 +1,9 @@
 ﻿using EnvioDeEmail.Adapter;
 using EnvioDeEmail.Builder;
+using MailKit.Net.Smtp;
+using MailKit;
+using MimeKit;
+using MailKit.Security;
 
 namespace EnvioDeEmail.Adapter
 {
@@ -14,9 +18,36 @@ namespace EnvioDeEmail.Adapter
         }
 
         // Método para enviar o Email
-        public void Enviar()
+        public void Enviar(Email email, MimeMessage message)
+
+
         {
-            Console.WriteLine($"Enviando email de {Email.Remetente} para {Email.Destinatario} com assunto: {Email.Assunto}");
+            Console.Write("Digite sua senha para enviar o email:");
+            string senha = Console.ReadLine(); // "******"
+            Console.WriteLine();
+
+            SmtpClient client= new SmtpClient();
+
+            try
+            {
+                client.Connect("smtp.ethereal.email", 587, SecureSocketOptions.StartTls);
+                client.Authenticate(email.Remetente, senha);
+                client.Send(message);
+
+                Console.WriteLine("Email Enviado!");
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                client.Disconnect(true);
+                client.Dispose();
+            }
+            Console.ReadLine();
+            
         }
     }
 }
