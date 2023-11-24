@@ -7,7 +7,7 @@ using MailKit.Security;
 
 namespace EnvioDeEmail.Adapter
 {
-    // Implementação do Adapter para enviar o Email
+    //Implementação do Adapter para enviar o Email.
     class AdapterEnvioEmail : IAdapterEnvioEmail
     {
         private Builder.Email Email;
@@ -17,7 +17,7 @@ namespace EnvioDeEmail.Adapter
             Email = email;
         }
 
-        // Método para enviar o Email
+        //Método que realiza o envio do Email.
         public void Enviar(Email email, MimeMessage message)
 
 
@@ -28,6 +28,7 @@ namespace EnvioDeEmail.Adapter
 
             SmtpClient client= new SmtpClient();
 
+            //Aqui temos a conexão do SMTP client também hardcoded pois o client utilizado é o Ethereal.
             try
             {
                 client.Connect("smtp.ethereal.email", 587, SecureSocketOptions.StartTls);
