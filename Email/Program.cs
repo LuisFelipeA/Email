@@ -8,7 +8,7 @@ using MimeKit;
 
 //Esta é uma aplicação de console que realiza o envio de e-mails com o MailKit e através de um SMTP Client, o Ethereal.
 //Implementando os padrões Builder, Decorator e Adapter.
-
+// https://ethereal.email/
 
 //O Program.cs é o código principal da aplicação e o primeiro a "rodar".
 
